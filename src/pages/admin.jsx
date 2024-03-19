@@ -193,7 +193,7 @@ async function deletePatient(patientid) {
               <button className="btn btn-warning mt-4" onClick={update}>Update</button> 
               <button className="btn btn-primary mt-4 btn btn-danger" type="button">
               <Link to="/appointment" style={{ color: 'inherit', textDecoration: 'inherit' }}>
-    Back to Appointments
+    Back To Appointments
   </Link>
   </button>
               </div>   
