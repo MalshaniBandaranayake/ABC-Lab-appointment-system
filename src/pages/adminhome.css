@@ -1,0 +1,7 @@
+body {
+    background-image: url('C:\Users\hp\Downloads\springboot project\my-app\src\images\pexels-karolina-grabowska-4047187.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover; /* Adjust the background size to cover the entire screen */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+  }
+  

@@ -1,0 +1,31 @@
+/* Contact.css */
+
+.contact-container {
+    position: relative; /* Make the container position relative */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Make the container take up the full height of the viewport */
+  }
+  
+  .contact-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240, 233, 233, 0.875); /* Semi-transparent black overlay */
+  }
+  
+  .contact-info {
+    position: relative; /* Make the contact info box position relative */
+    z-index: 1; /* Ensure the contact info box is above the overlay */
+    background-color: #74acb8; /* Background color for the container */
+    padding: 40px; /* Padding around the container */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 0 10px rgba(241, 234, 234, 0.911); /* Drop shadow effect */
+  }
+  
+  /* You can add more styles as needed */
+  

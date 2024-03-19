@@ -1,0 +1,45 @@
+
+.imageContainer {
+    display: flex;
+    flex-wrap: wrap; /* Wrap the images into multiple lines */
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .image {
+    width: 600px; /* Adjust the width and height as needed */
+    height: 600px;
+    background-size: cover;
+    margin-bottom: 20px; /* Add margin to create space between rows */
+  }
+  
+  .image1,
+  .image2,
+  .image3,
+  .image4 {
+    width: calc(50% - 10px); /* Set width to 50% minus half of the margin between images */
+    margin-right: 20px; /* Add margin to create space between images */
+  }
+  
+  .image1,
+  .image3 {
+    margin-right: 0; /* Remove margin from the first image in each line */
+  }
+  
+  
+  .image1 {
+    background-image: url('C:\Users\hp\Downloads\springboot project\my-app\src\images\Image1.jpg'); /* Adjust the path as needed */
+  }
+  
+  .image2 {
+    background-image: url('C:\Users\hp\Downloads\springboot project\my-app\src\images\Image2.jpg'); /* Adjust the path as needed */
+  }
+  
+  .image3 {
+    background-image: url('C:\Users\hp\Downloads\springboot project\my-app\src\images\Image3.jpg'); /* Adjust the path as needed */
+  }
+  
+  .image4 {
+    background-image: url('C:\Users\hp\Downloads\springboot project\my-app\src\images\Image4.jpg'); /* Adjust the path as needed */
+  }
+  

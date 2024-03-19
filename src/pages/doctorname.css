@@ -1,0 +1,40 @@
+.imageContainer {
+    display: flex;
+    flex-wrap: wrap; /* Wrap the images into multiple lines */
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .image {
+    width: 600px; /* Adjust the width and height as needed */
+    height: 600px;
+    background-size: cover;
+    margin-bottom: 20px; /* Add margin to create space between rows */
+  }
+  
+  .doctor1,
+  .doctor2,
+  .doctor3{
+    width: calc(50% - 10px); /* Set width to 50% minus half of the margin between images */
+    margin-right: 20px; /* Add margin to create space between images */
+  }
+  
+  .doctor1,
+  .doctor2 {
+    margin-right: 0; /* Remove margin from the first image in each line */
+  }
+  
+  
+  .doctor1 {
+    background-image: url('C:\Users\hp\Downloads\springboot project\my-app\src\images\doctor1.webp'); /* Adjust the path as needed */
+  }
+  
+  .doctor2 {
+    background-image: url('C:\Users\hp\Downloads\springboot project\my-app\src\images\docotor2.webp'); /* Adjust the path as needed */
+  }
+  
+  .doctor3 {
+    background-image: url('C:\Users\hp\Downloads\springboot project\my-app\src\images\doctor3.jpg'); /* Adjust the path as needed */
+  }
+  
+  
