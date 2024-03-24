@@ -15,7 +15,6 @@ function Patient()
   const [patientaddress, setAddress] = useState("");
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
-  //const [patients, setUsers] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [doctorname, setDoctorname] = useState('');
     const [patients, setPatients] = useState([]);
@@ -41,32 +40,6 @@ function Patient()
   function handleSearchChange(event) {
       setSearchQuery(event.target.value);
   }
-
- 
-  //async function save(event) {
-   // event.preventDefault();
-   // try {
-      //const response = await axios.post("http://localhost:8080/api/v1/patients/save", {
-       //nic: nic,
-       //patientname: patientname,
-       // patientaddress: patientaddress,
-       // email: email,
-        //mobile: mobile
-     // });
-      //alert("Patient Registration Successful");
-      // Clear input fields after successful registration
-     // setNIC("");
-      //setName("");
-      //setAddress("");
-      //setEmail("");
-      //setMobile("");
-      // Reload patient data
-     // Load();
-    //} catch (error) {
-     // alert("Patient Registration Failed");
-     // console.error("Error saving patient:", error);
-    //}
-  //}
 
  
 
