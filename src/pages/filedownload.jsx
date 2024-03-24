@@ -7,6 +7,7 @@ function FileDownload() {
   const [patientNIC, setPatientNic] = useState('');
   const [fileData, setFileData] = useState(null);
   const [searchResults, setSearchResults] = useState([]);
+  const [error, setError] = useState('');
 
   const handleDownload = async (fileId) => {
     try {
@@ -21,6 +22,14 @@ function FileDownload() {
   };
 
   const handleSearch = async () => {
+    // Validate NIC before making the search request
+    if (!/^(\d{9}V?)$/.test(patientNIC)) {
+      setError('Invalid NIC format. NIC should be 9 digits and "V".');
+      return;
+    } else {
+      setError('');
+    }
+
     try {
       const response = await axios.get(`http://localhost:8080/api/v1/files/search/${patientNIC}`);
       setSearchResults(response.data);
@@ -31,12 +40,12 @@ function FileDownload() {
 
   return (
     <div className="container">
-      
       <h2 className="my-4">Search Patient Reports</h2>
       <input className="form-control mb-2" type="text" placeholder="Patient NIC" value={patientNIC} onChange={(e) => setPatientNic(e.target.value)} />
       <button className="btn btn-primary mb-2" onClick={handleSearch}>Search</button>
 
-      {/* Display search results */}
+      {error && <p className="text-danger">{error}</p>}
+
       <div>
         <h3>Search Results:</h3>
         <table className="table table-dark" align="center">
@@ -55,7 +64,6 @@ function FileDownload() {
                 <td>{file.patientNIC}</td>
                 <td>{file.patientName}</td>
                 <td>
-                  
                   <a className="btn btn-success" href={`http://localhost:8080/api/v1/files/download/${file._id}`} download>Download File</a>
                 </td>
               </tr>
