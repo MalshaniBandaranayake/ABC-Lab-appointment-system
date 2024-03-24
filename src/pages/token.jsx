@@ -12,6 +12,13 @@ function Token() {
     if (event.key === 'Enter') {
       setLoading(true);
       try {
+        // Validate NICs before making the API call
+        const invalidNIC = nics.find(nic => !/^(\d{9}V?)$/.test(nic));
+        if (invalidNIC) {
+          setError("Invalid NIC format. NIC should be 9 digits followed by 'V'.");
+          return;
+        }
+
         const promises = nics.map(async nic => {
           const response = await axios.get(`http://localhost:8080/api/v1/appointments/search/${nic}`);
           return response.data;
