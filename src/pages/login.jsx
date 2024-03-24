@@ -17,7 +17,7 @@ export function Login() {
       window.location.href = '/adminhome';
     } 
     // Check if the entered credentials match the hardcoded ones for doctors
-    else if (username === 'doctor' && password === 'doctor45') {
+    else if (username === 'doctor' && password === 'doctor456') {
       // Redirect to doctor dashboard
       
       window.location.href = '/doctor';
