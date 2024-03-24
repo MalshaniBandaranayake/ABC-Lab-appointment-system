@@ -10,6 +10,7 @@ function FileUpload() {
   const [message, setMessage] = useState('');
   const [files, setFiles] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
+  const [error, setError] = useState('');
 
   useEffect(() => {
     getAllFiles();
@@ -29,6 +30,10 @@ function FileUpload() {
   };
 
   const handleUpload = async () => {
+    if (!file || !patientName || !patientNIC) {
+      setError('All fields are required');
+      return;
+    }
     const formData = new FormData();
     formData.append('file', file);
     formData.append('patientName', patientName);
@@ -62,7 +67,10 @@ function FileUpload() {
   };
 
   const handleSearch = async () => {
-    // Implement search functionality here
+    if (!searchQuery) {
+      setError('Search query is required');
+      return;
+    }
     try {
       const response = await axios.get(`http://localhost:8080/api/v1/files/search/${searchQuery}`);
       setFiles(response.data);
@@ -74,12 +82,14 @@ function FileUpload() {
   const handleClear = () => {
     setSearchQuery('');
     getAllFiles(); // Clearing search query also refreshes the file list
+    setError('');
   };
 
   return (
     <div className="container">
       
       <h2 className="my-4">File Upload</h2>
+      {error && <p className="text-danger">{error}</p>}
       <input className="form-control mb-2" type="file" onChange={handleFileChange} />
       <input className="form-control mb-2" type="text" placeholder="Patient Name" value={patientName} onChange={(e) => setPatientName(e.target.value)} />
       <input className="form-control mb-2" type="text" placeholder="Patient NIC" value={patientNIC} onChange={(e) => setPatientNIC(e.target.value)} />
