@@ -13,19 +13,19 @@ export function Login() {
     // Check if the entered credentials match the hardcoded ones for admin
     if (username === 'admin' && password === 'admin123') {
       // Redirect to admin dashboard
-      // replace the link with the actual route to your admin home page
+      
       window.location.href = '/adminhome';
     } 
     // Check if the entered credentials match the hardcoded ones for doctors
     else if (username === 'doctor' && password === 'doctor456') {
       // Redirect to doctor dashboard
-      // replace the link with the actual route to your doctor home page
+      
       window.location.href = '/doctor';
     } 
 
     else if (username === 'labtech' && password === 'labtech789') {
       // Redirect to lab technician dashboard
-      // replace the link with the actual route to your lab technician home page
+      
       window.location.href = '/labtechnition';
     } 
     // Handle invalid credentials
