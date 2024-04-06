@@ -10,7 +10,7 @@ function adminhome() {
   return (
     <div>
       <AdminNavbar/>
-      <h2>Welecome to admin page</h2>
+      <h2>Welecome To Admin Home</h2>
 
       <div className="imageContainer">
         <div className="image image1"></div>
