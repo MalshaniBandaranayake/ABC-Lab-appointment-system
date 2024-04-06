@@ -8,7 +8,7 @@ import './MainHome.css'; // Import CSS file
   return (
     <div>
       <Navbar/>
-      <h2>Home Page</h2>
+      <h2>Welcome To Patient Home</h2>
 
       <div className="imageContainer">
         <div className="image image1"></div>
