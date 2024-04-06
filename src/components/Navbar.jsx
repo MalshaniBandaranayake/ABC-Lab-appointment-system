@@ -34,7 +34,7 @@ function Navbar() {
         </li>
 
         <li className="navbar-item">
-          <Link to="/filedownload" className="navbar-link">Report Generator</Link>
+          <Link to="/filedownload" className="navbar-link">Download Report</Link>
         </li>
 
        

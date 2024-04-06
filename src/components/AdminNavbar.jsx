@@ -27,7 +27,7 @@ function AdminNavbar() {
         </li>
 
         <li className="navbar-item">
-          <Link to="/filedownload" className="navbar-link">Generate Reports </Link>
+          <Link to="/filedownload" className="navbar-link">Download Reports </Link>
         </li>
 
         
