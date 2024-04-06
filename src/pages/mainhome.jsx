@@ -1,7 +1,7 @@
 import React from 'react';
 import MainNavbar from '../components/mainNavbar';
 import Footer from '../components/Footer'; // Import the Footer component
-import './MainHome.css'; // Import your CSS file
+import './MainHome.css'; // Import CSS file
 
 function MainHome() {
   return (
